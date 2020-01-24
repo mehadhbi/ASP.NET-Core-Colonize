@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Colonize.Website.Data;
 using Microsoft.Extensions.Configuration;
@@ -33,6 +27,9 @@ namespace Colonize.Website
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
+
+                services.AddRazorPages()
+                .AddRazorRuntimeCompilation();  //Uppdaterar projektet samtidigt som det körs + install-package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

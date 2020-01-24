@@ -5,13 +5,23 @@
     <UserSecretsId>aspnet-Colonize.Website-F43DBDC7-762E-45B3-A0D5-62DEC42DB4CB</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20200124100019_AddVoyageShipAndDestination.cs" />
+    <Compile Remove="Data\Migrations\20200124100019_AddVoyageShipAndDestination.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200124114458_SeedDatabaseWithShips.cs" />
+    <Compile Remove="Data\Migrations\20200124114458_SeedDatabaseWithShips.Designer.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
   </ItemGroup>
 
 </Project>
